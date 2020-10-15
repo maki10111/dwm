@@ -20,7 +20,7 @@ static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#770000";
+static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
 static char *colors[][3] = {
        /*               fg           bg           border   */
@@ -109,7 +109,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { TERMINAL, NULL };
-static const char *brave[]  = { "brave-nightly", NULL };
+static const char *browser[]  = { "qutebrowser", NULL };
 static const char *code[]  = { "code", NULL };
 
 static const char *libreoffice[]  = { "libreoffice", NULL };
@@ -148,7 +148,7 @@ static Key keys[] = {
 //	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	SHCMD("sysact") },q
 	{ MODKEY,				XK_q,		killclient,	{0} },
 //	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") },
-	{ MODKEY,				XK_w,		spawn,		{.v = brave }},
+	{ MODKEY,				XK_w,		spawn,		{.v = browser }},
 	{ MODKEY,				XK_v,		spawn,		{.v = code} },
 	{ MODKEY,				XK_e,		spawn,		SHCMD(TERMINAL " -e lf ~/") },
 	{ MODKEY,				XK_o,		spawn,		{.v = libreoffice} },
@@ -257,8 +257,8 @@ static Key keys[] = {
 	{ MODKEY,				XK_Return,	zoom,		{0} },		 //Master
 	{ MODKEY|ShiftMask,		XK_Return,	togglefloating,	{0} }, //Float window
 //<Screenshots>
-	{ 0,					XK_Print,	spawn,		SHCMD("flameshot full -p ~/pictures/Screenshits") },
-	{ MODKEY,				XK_p,	spawn,		SHCMD(TERMINAL "flameshot gui -p ~/pictures/Screenshits") },
+	{ 0,					XK_Print,	spawn,		SHCMD("flameshot full -p ~/pics/screenshits") },
+	{ MODKEY,				XK_p,	spawn,		SHCMD("flameshot gui -p ~/pics/screenshits") },
 
 //</Screenshots>
 //<ScreenRecord>
@@ -293,8 +293,8 @@ static Key keys[] = {
 //	{ 0, XF86XK_TouchpadToggle,	spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOff,	spawn,		SHCMD("synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOn,		spawn,		SHCMD("synclient TouchpadOff=0") },
-	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 1") },
-	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 1") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 10") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("sudo xbacklight -dec 10") },
 
 	{ MODKEY|ShiftMask,             XK_q,      quit,     {0} },
 	/* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } }, */
@@ -331,7 +331,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
 	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
-	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/git/forks/dwmblocks/config.h") },
+	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/git/repos/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        defaultgaps,	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
