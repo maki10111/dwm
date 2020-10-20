@@ -45,6 +45,7 @@ static Sp scratchpads[] = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tagsalt[] = { "1️⃣", "2️⃣", "3️⃣","4️⃣","5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -230,6 +231,8 @@ static Key keys[] = {
 	/* V is automatically bound above in STACKKEYS */
 //	{ MODKEY,			XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_b,		spawn,		SHCMD("btcon") },
+	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("btdcon") },
+
 
 // { MODKEY|ShiftMask,			XK_b,		spawn,		SHCMD("") },
 //	{ MODKEY,			XK_n,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
@@ -246,6 +249,8 @@ static Key keys[] = {
 //</Important>
 //	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
 //	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
+	{ MODKEY,			XK_h,		togglealttag,	{0} },
+
 //	{ MODKEY,			XK_Right,	focusmon,	{.i = +1 } },
 //	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = +1 } },
 
