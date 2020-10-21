@@ -17,11 +17,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "MesloLGS NF:size=10", "JoyPixels:pixelsize=12:antialias=true:autohint=true"  };
 static char dmenufont[]             = "MesloLGS NF:size=10";
 static char normbgcolor[]           = "#000000";
-static char normbordercolor[]       = "#2a8b57";
+static char normbordercolor[]       = "#00fa9a";
 static char normfgcolor[]           = "#eeeeee";
-static char selfgcolor[]            = "#eeeeee";
+static char selfgcolor[]            = "#1e90ff";
 static char selbordercolor[]        = "#00fa9a";
-static char selbgcolor[]            = "#2e8b57";
+static char selbgcolor[]            = "#000000";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -44,7 +44,6 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const char *tags[] = { "\uf120", "\uf7ae", "\uf121", "\uf04b", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
 static const char *tagsalt[] ={ "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -87,19 +86,19 @@ static const Layout layouts[] = {
 //	{ "><>",	NULL },			/* no layout function means floating behavior */
 //	{ NULL,		NULL },
 
- 	{ "😀 ",	tile },			/* Default: Master on left, slaves on right */
-	{ "😄",	bstack },		/* Master on top, slaves on bottom */
+ 	{ "\u2648 ",	tile },			/* Default: Master on left, slaves on right */
+	{ "\u2649",	bstack },		/* Master on top, slaves on bottom */
 
-	{ "🤣",	spiral },		/* Fibonacci spiral */
-	{ "😅",	dwindle },		/* Decreasing in size right a nd leftward */
+	{ "\u264A",	spiral },		/* Fibonacci spiral */
+	{ "\u264B",	dwindle },		/* Decreasing in size right a nd leftward */
 
-	{ "😇",	deck },			/* Master on left, slaves in monocle-like mode on right */
- 	{ "😜",	monocle },		/* All windows on top of eachother */
+	{ "\u264C",	deck },			/* Master on left, slaves in monocle-like mode on right */
+ 	{ "\u264D",	monocle },		/* All windows on top of eachother */
 
-	{ "😝",	centeredmaster },		/* Master in middle, slaves on sides */
-	{ "🤭",	centeredfloatingmaster },	/* Same but master floats */
+	{ "\u264E",	centeredmaster },		/* Master in middle, slaves on sides */
+	{ "\u264F",	centeredfloatingmaster },	/* Same but master floats */
 
-	{ "😵",	NULL },			/* no layout function means floating behavior */
+	{ "\u2650",	NULL },			/* no layout function means floating behavior */
 	{ NULL,		NULL },
 
 };
@@ -127,7 +126,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { TERMINAL, NULL };
-static const char *browser[]  = { "qutebrowser", NULL };
+static const char *browser[]  = { "brave", NULL };
 static const char *code[]  = { "code", NULL };
 
 static const char *libreoffice[]  = { "libreoffice", NULL };
