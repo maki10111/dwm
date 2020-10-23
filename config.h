@@ -44,8 +44,8 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "\uf120", "\uf7ae", "\uf121", "\uf04b", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
-static const char *tagsalt[] ={ "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d" };
+static const char *tagsalt[] ={ "\uf8a3", "\uf8a6", "\uf8a9", "\uf8ac", "\uf8af", "\uf8b2", "\uf8b5", "\uf8b8", "\uf8bb" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -89,19 +89,19 @@ static const Layout layouts[] = {
 //	{ "><>",	NULL },			/* no layout function means floating behavior */
 //	{ NULL,		NULL },
 
- 	{ "\u2648 ",	tile },			/* Default: Master on left, slaves on right */
-	{ "\u2649",	bstack },		/* Master on top, slaves on bottom */
+ 	{ "⏽ \uf8a3 ⏽",	tile },			/* 1 Default: Master on left, slaves on right */
+	{ "⏽ \uf8a6 ⏽",	bstack },		/* 2 Master on top, slaves on bottom */
 
-	{ "\u264A",	spiral },		/* Fibonacci spiral */
-	{ "\u264B",	dwindle },		/* Decreasing in size right a nd leftward */
+	{ "⏽ \uf8a9 ⏽",	spiral },		/* 3 Fibonacci spiral */
+	{ "⏽ \uf8ac ⏽",	dwindle },		/* 4 Decreasing in size right a nd leftward */
 
-	{ "\u264C",	deck },			/* Master on left, slaves in monocle-like mode on right */
- 	{ "\u264D",	monocle },		/* All windows on top of eachother */
+	{ "⏽ \uf8af ⏽",	deck },			/* 5 Master on left, slaves in monocle-like mode on right */
+ 	{ "⏽ \uf8b2 ⏽",	monocle },		/* 6 All windows on top of eachother */
 
-	{ "\u264E",	centeredmaster },		/* Master in middle, slaves on sides */
-	{ "\u264F",	centeredfloatingmaster },	/* Same but master floats */
+	{ "⏽ \uf8b5 ⏽",	centeredmaster },	/* 7 Master in middle, slaves on sides */
+	{ "⏽ \uf8b8 ⏽",	centeredfloatingmaster },/*8 Same but master floats */
 
-	{ "\u2650",	NULL },			/* no layout function means floating behavior */
+	{ "⏽ \uf8bb ⏽",	NULL },			/*9 no layout function means floating behavior */
 	{ NULL,		NULL },
 
 };
