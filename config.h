@@ -44,7 +44,14 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d" };
+//uses  as tags
+static const char *tags[] = { "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292" };
+//uses  笠as tags
+//static const char *tags[] = { "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8" };
+//uses  as tags
+//static const char *tags[] = { "\uf673", "\uf673", "\uf673", "\uf673", "\uf673", "\uf673", "\uf673", "\uf673", "\uf673" };
+
+//uses numbers like  as alt tags
 static const char *tagsalt[] ={ "\uf8a3", "\uf8a6", "\uf8a9", "\uf8ac", "\uf8af", "\uf8b2", "\uf8b5", "\uf8b8", "\uf8bb" };
 
 static const Rule rules[] = {
@@ -89,19 +96,15 @@ static const Layout layouts[] = {
 //	{ "><>",	NULL },			/* no layout function means floating behavior */
 //	{ NULL,		NULL },
 
- 	{ "⏽ \uf8a3 ⏽",	tile },			/* 1 Default: Master on left, slaves on right */
-	{ "⏽ \uf8a6 ⏽",	bstack },		/* 2 Master on top, slaves on bottom */
-
-	{ "⏽ \uf8a9 ⏽",	spiral },		/* 3 Fibonacci spiral */
-	{ "⏽ \uf8ac ⏽",	dwindle },		/* 4 Decreasing in size right a nd leftward */
-
-	{ "⏽ \uf8af ⏽",	deck },			/* 5 Master on left, slaves in monocle-like mode on right */
- 	{ "⏽ \uf8b2 ⏽",	monocle },		/* 6 All windows on top of eachother */
-
-	{ "⏽ \uf8b5 ⏽",	centeredmaster },	/* 7 Master in middle, slaves on sides */
-	{ "⏽ \uf8b8 ⏽",	centeredfloatingmaster },/*8 Same but master floats */
-
-	{ "⏽ \uf8bb ⏽",	NULL },			/*9 no layout function means floating behavior */
+	{ "\uf8a3",	tile },			/* 1 Default: Master on left, slaves on right */
+	{ "\uf8a6",	bstack },		/* 2 Master on top, slaves on bottom */
+	{ "\uf8a9",	spiral },		/* 3 Fibonacci spiral */
+	{ "\uf8ac",	dwindle },		/* 4 Decreasing in size right a nd leftward */
+	{ "\uf8af",	deck },			/* 5 Master on left, slaves in monocle-like mode on right */
+ 	{ "\uf8b2",	monocle },		/* 6 All windows on top of eachother */
+	{ "\uf8b5",	centeredmaster },	/* 7 Master in middle, slaves on sides */
+	{ "\uf8b8",	centeredfloatingmaster },/*8 Same but master floats */
+	{ "\uf8bb",	NULL },			/*9 no layout function means floating behavior */
 	{ NULL,		NULL },
 
 };
@@ -298,9 +301,9 @@ static Key keys[] = {
 	{MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
 //</ScreenRecord>
-	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t") },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks) ") },
-	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks) ") },
+	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; pkill -RTMIN+3 dwmblocks") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 5; pkill -RTMIN+3 dwmblocks") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 5; pkill -RTMIN+3 dwmblocks") },
 	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("mpc prev  ") },
 	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("mpc next ") },
 //	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("mpc toggle") },
@@ -317,7 +320,7 @@ static Key keys[] = {
 //	{ 0, XF86XK_DOS,		spawn,		SHCMD(TERMINAL) },
 //	{ 0, XF86XK_ScreenSaver,	spawn,		SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
 //	{ 0, XF86XK_TaskPane,		spawn,		SHCMD(TERMINAL " -e htop") },
-	{ MODKEY|ShiftMask, 		XK_m,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks ") },
+	{ MODKEY|ShiftMask, 		XK_m,		spawn,		SHCMD(TERMINAL " -e neomutt") },
 //	{ 0, XF86XK_MyComputer,		spawn,		SHCMD(TERMINAL " -e lf /") },
 	/* { 0, XF86XK_Battery,		spawn,		SHCMD("") }, */
 //	{ 0, XF86XK_Launch1,		spawn,		SHCMD("xset dpms force off") },
