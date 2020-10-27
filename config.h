@@ -138,7 +138,7 @@ static const char *browser[]  = { "brave", NULL };
 static const char *code[]  = { "code", NULL };
 
 static const char *libreoffice[]  = { "libreoffice", NULL };
-static const char *gimp[]  = { "gimp", NULL };
+//static const char *gimp[]  = { "gimp", NULL };
 
 #include <X11/XF86keysym.h>
 #include "shiftview.c"
@@ -232,7 +232,7 @@ static Key keys[] = {
 //	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
 
 //	{ MODKEY,				XK_z,		incrgaps,	{.i = +3 } },
-	{ MODKEY,				XK_z,		spawn,	SHCMD("watchv") },
+	{ MODKEY,				XK_z,		spawn,	SHCMD(TERMINAL " -e watchv") },
 
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 //	{ MODKEY,				XK_x,		incrgaps,	{.i = -3 } },
@@ -241,7 +241,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 //	{ MODKEY,			XK_b,		togglebar,	{0} },
-	{ MODKEY,			XK_b,		spawn,		SHCMD("btcon") },
+	{ MODKEY,			XK_b,		spawn,		SHCMD(TERMINAL " -e btcon") },
 	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("btdcon") },
 
 
