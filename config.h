@@ -147,7 +147,7 @@ static Key keys[] = {
 	{ MODKEY,				XK_v,		spawn,		{.v = code} },
 	{ MODKEY,				XK_e,		spawn,		SHCMD(TERMINAL " -e lf ~/") },
 	{ MODKEY,				XK_o,		spawn,		{.v = libreoffice} },
-	{ MODKEY,				XK_g,		spawn,		SHCMD("games") },
+	{ MODKEY,				XK_g,		spawn,		SHCMD(TERMINAL " -e games") },
 	{MODKEY,				XK_q,		killclient,	{0} },
 
 
