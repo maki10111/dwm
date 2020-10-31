@@ -190,6 +190,8 @@ static Key keys[] = {
 	{ MODKEY,				XK_z,		spawn,	SHCMD(TERMINAL " -e watchv") },
 
 	 { MODKEY,			XK_c,		spawn,		SHCMD(TERMINAL " -e camtoggle") },
+	 { MODKEY,			XK_l,		spawn,		SHCMD("slock") },
+
 	{ MODKEY,			XK_b,		spawn,		SHCMD(TERMINAL " -e btcon") },
 	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("btdcon") },
 
