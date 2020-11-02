@@ -21,7 +21,7 @@ static char normbgcolor[]           = "#000000";
 static char normbordercolor[]       = "#00fa9a";
 static char normfgcolor[]           = "#eeeeee";
 static char selfgcolor[]            = "#1e90ff";
-static char selbordercolor[]        = "#00fa9a";
+static char selbordercolor[]        = "#dc143c";
 static char selbgcolor[]            = "#000000";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
@@ -216,6 +216,7 @@ static Key keys[] = {
 	{MODKEY|ShiftMask,		XK_Print,	spawn,		SHCMD("dmenurecord kill")},
 	{MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
+	{ MODKEY|ShiftMask, 		XK_m,		spawn,		SHCMD(TERMINAL " -e neomutt") },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; pkill -RTMIN+3 dwmblocks") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 5; pkill -RTMIN+3 dwmblocks") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 5; pkill -RTMIN+3 dwmblocks") },
@@ -223,7 +224,6 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("mpc next ") },
 	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("mpc toggle ") },
 	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("mpc stop ") },
-	{ MODKEY|ShiftMask, 		XK_m,		spawn,		SHCMD(TERMINAL " -e neomutt") },
 	{ 0, XF86XK_TouchpadOff,	spawn,		SHCMD("synclient TouchpadOff=1") },
 	{ 0, XF86XK_TouchpadOn,		spawn,		SHCMD("synclient TouchpadOff=0") },
 	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("sudo xbacklight -inc 10 -perceived") },
