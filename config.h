@@ -14,6 +14,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bh            = 15;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int startontag         = 0;        /* 0 means no tag active on start */
 static const char *fonts[]          = { "MesloLGS NF:size=10", "JoyPixels:pixelsize=12:antialias=true:autohint=true"  };
 static char dmenufont[]             = "MesloLGS NF:size=10";
