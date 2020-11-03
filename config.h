@@ -15,7 +15,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 7;       /* vertical padding of bar */
-static const int sidepad            = 20;       /* horizontal padding of bar */
+static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int startontag         = 0;        /* 0 means no tag active on start */
 static const char *fonts[]          = { "MesloLGS NF:size=8", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
@@ -26,7 +26,7 @@ static char normfgcolor[]           = "#eeeeee";
 static char selfgcolor[]            = "#1e90ff";
 static char selbordercolor[]        = "#dc143c";
 static char selbgcolor[]            = "#000000";
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xb0;
 static const unsigned int borderalpha = OPAQUE;
 
 static char *colors[][3] = {
