@@ -58,10 +58,17 @@ static Sp scratchpads[] = {
 /* tagging */
 
 //uses  as tags
-static const char *tags[] = { "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d" };
+//static const char *tags[] = { "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d" };
+//uses  as tags
+//static const char *alttags[] = { "\uf069", "\uf069", "\uf069", "\uf069", "\uf069", "\uf069", "\uf069", "\uf069", "\uf069" };
+//uses  as tags
+static const char *alttags[] = { "\uf44d", "\uf44d", "\uf44d", "\uf44d", "\uf44d", "\uf44d", "\uf44d", "\uf44d", "\uf44d" };
 
 //uses  as tags
-static const char *alttags[] = { "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292" };
+//static const char *tags[] = { "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292" };
+//uses  as tags
+static const char *tags[] = { "\uf068", "\uf068", "\uf068", "\uf068", "\uf068", "\uf068", "\uf068", "\uf068", "\uf068" };
+
 //uses  笠as tags
 //static const char *tags[] = { "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8" };
 //uses  as tags
