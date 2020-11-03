@@ -56,8 +56,12 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
+
+//uses  as tags
+static const char *tags[] = { "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d", "\uf00d" };
+
 //uses  as tags
-static const char *tags[] = { "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292" };
+static const char *alttags[] = { "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292", "\uf292" };
 //uses  笠as tags
 //static const char *tags[] = { "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8", "\uf9f8" };
 //uses  as tags
