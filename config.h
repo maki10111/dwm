@@ -170,7 +170,7 @@ static Key keys[] = {
 	{ MODKEY,				XK_v,		spawn,		{.v = code} },
 	{ MODKEY,				XK_e,		spawn,		SHCMD(TERMINAL " -e ranger ~/") },
 	{ MODKEY,				XK_o,		spawn,		{.v = libreoffice} },
-	{ MODKEY,				XK_g,		spawn,		SHCMD(TERMINAL " -e games") },
+	{ MODKEY,				XK_g,		spawn,		SHCMD("games") },
 	{MODKEY,				XK_q,		killclient,	{0} },
 
 
@@ -207,8 +207,11 @@ static Key keys[] = {
 	 { MODKEY,			XK_c,		spawn,		SHCMD(TERMINAL " -e camtoggle") },
 	 { MODKEY,			XK_l,		spawn,		SHCMD("slock") },
 
-	{ MODKEY,			XK_b,		spawn,		SHCMD(TERMINAL " -e btcon") },
+	{ MODKEY,			XK_b,		spawn,		SHCMD("btcon") },
 	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("btdcon") },
+	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("dic") },
+
+
 
 
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
@@ -231,6 +234,8 @@ static Key keys[] = {
 	{MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
 	{ MODKEY|ShiftMask, 		XK_m,		spawn,		SHCMD(TERMINAL " -e neomutt") },
+	{ MODKEY|ShiftMask, 		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+12 dwmblocks") },
+
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; pkill -RTMIN+3 dwmblocks") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 5; pkill -RTMIN+3 dwmblocks") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 5; pkill -RTMIN+3 dwmblocks") },
