@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+/* See LICENSE file for copyright and license details. jekejk*/
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
@@ -18,8 +18,8 @@ static const int vertpad            = 7;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int startontag         = 0;        /* 0 means no tag active on start */
-static const char *fonts[]          = { "MesloLGS NF:size=8", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
-static char dmenufont[]             = "MesloLGS NF:size=8";
+static const char *fonts[]          = { "Source Code Pro:size=8", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static char dmenufont[]             = "Source Code Pro:size=8";
 static char normbgcolor[]           = "#000000";
 static char normbordercolor[]       = "#00fa9a";
 static char normfgcolor[]           = "#eeeeee";
@@ -138,7 +138,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { TERMINAL, NULL };
-static const char *browser[]  = { "brave", NULL };
+static const char *browser[]  = { "tabbed surf -e", NULL };
 static const char *code[]  = { "code", NULL };
 
 static const char *libreoffice[]  = { "libreoffice", NULL };
@@ -168,7 +168,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
 	{ MODKEY,				XK_w,		spawn,		{.v = browser }},
 	{ MODKEY,				XK_v,		spawn,		{.v = code} },
-	{ MODKEY,				XK_e,		spawn,		SHCMD(TERMINAL " -e ranger ~/") },
+	{ MODKEY,				XK_e,		spawn,		SHCMD(TERMINAL " -e lf ~/") },
 	{ MODKEY,				XK_o,		spawn,		{.v = libreoffice} },
 	{ MODKEY,				XK_g,		spawn,		SHCMD("games") },
 	{MODKEY,				XK_q,		killclient,	{0} },
