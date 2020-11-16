@@ -138,7 +138,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { TERMINAL, NULL };
-static const char *browser[]  = { "tabbed surf -e", NULL };
 static const char *code[]  = { "code", NULL };
 
 static const char *libreoffice[]  = { "libreoffice", NULL };
@@ -166,7 +165,7 @@ static Key keys[] = {
 
 	{ MODKEY,				XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
-	{ MODKEY,				XK_w,		spawn,		{.v = browser }},
+	{ MODKEY,				XK_w,		spawn,		SHCMD("brave")},
 	{ MODKEY,				XK_v,		spawn,		{.v = code} },
 	{ MODKEY,				XK_e,		spawn,		SHCMD(TERMINAL " -e lf ~/") },
 	{ MODKEY,				XK_o,		spawn,		{.v = libreoffice} },
@@ -232,7 +231,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Print,	spawn,		SHCMD("dmenurecord") },
 	{MODKEY|ShiftMask,		XK_Print,	spawn,		SHCMD("dmenurecord kill")},
 	{MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
-	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
+	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey -s small --opacity 0.1 &") },
 	{ MODKEY|ShiftMask, 		XK_m,		spawn,		SHCMD(TERMINAL " -e neomutt") },
 	{ MODKEY|ShiftMask, 		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+12 dwmblocks") },
 
