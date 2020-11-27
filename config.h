@@ -4,7 +4,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const unsigned int gappih    = 0;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 0;       /* vert inner gap between windows */
@@ -204,6 +204,7 @@ static Key keys[] = {
 	{ MODKEY,				XK_z,		spawn,	SHCMD(TERMINAL " -e watchv") },
 
 	 { MODKEY,			XK_c,		spawn,		SHCMD(TERMINAL " -e camtoggle") },
+	{ MODKEY|ShiftMask,		XK_a,		spawn,		SHCMD(TERMINAL " -e android-file-transfer")},
 	 { MODKEY,			XK_l,		spawn,		SHCMD("slock") },
 
 	{ MODKEY,			XK_b,		spawn,		SHCMD("btcon") },
